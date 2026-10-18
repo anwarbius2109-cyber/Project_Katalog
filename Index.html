@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Undangan Digital - MSA</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Link ke Style CSS -->
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-poppins antialiased">
 
+    <!-- Navbar / Menu Melayang -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/70 backdrop-blur-md border-b border-slate-200/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <!-- Bagian Logo (Kiri Atas) -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <!-- Ganti src ini dengan lokasi logo Anda di folder Assets -->
+                    <img class="h-10 w-auto object-contain" src="Assets/logo.png" alt="Logo MSA" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=MSA&background=0f172a&color=fff&rounded=true';">
+                    <span class="font-playfair font-bold text-xl md:text-2xl text-slate-900 hidden sm:block">MSA Invitation</span>
+                </div>
+                
+                <!-- Tombol Order (Kanan Atas) -->
+                <div>
+                    <!-- Ubah nomor WhatsApp dan teks pesannya -->
+                    <a href="https://wa.me/6281234567890?text=Halo%20MSA%20Invitation,%20saya%20ingin%20konsultasi%20mengenai%20pembuatan%20undangan%20digital..." target="_blank" class="inline-flex items-center justify-center px-5 py-2 md:px-6 md:py-2.5 border border-transparent text-sm font-medium rounded-full text-white bg-slate-900 hover:bg-slate-800 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5">
+                        Order Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header (Ditambah padding atas pt-28 agar tidak tertutup menu melayang) -->
+    <header class="pt-28 pb-10 text-center px-4">
+        <h1 class="font-playfair text-4xl md:text-5xl font-bold text-slate-900 mb-4">Katalog & Portofolio</h1>
+        <p class="text-slate-500 max-w-xl mx-auto text-sm md:text-base">Pilih tema undangan website impian Anda atau lihat portofolio dari klien-klien kami sebelumnya.</p>
+    </header>
+
+    <!-- Filter Tab -->
+    <div class="flex justify-center gap-3 md:gap-4 mb-10 px-4">
+        <button onclick="loadData('katalog')" id="btn-katalog" class="tab-btn active px-6 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-300 bg-slate-900 text-white shadow-md">
+            Katalog Tema
+        </button>
+        <button onclick="loadData('porto')" id="btn-porto" class="tab-btn px-6 py-2 rounded-full text-xs md:text-sm font-medium transition-all duration-300 bg-white text-slate-600 hover:bg-slate-200 shadow-sm border border-slate-200">
+            Portofolio
+        </button>
+    </div>
+
+    <!-- Container Grid (Responsive: 1 kolom di HP, 2 di Tablet, 3 di Desktop) -->
+    <main class="max-w-7xl mx-auto px-4 pb-20">
+        <div id="grid-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <!-- Card akan dirender di sini oleh Script.js -->
+        </div>
+        
+        <!-- Loading State -->
+        <div id="loading" class="hidden text-center py-10">
+            <div class="inline-block w-8 h-8 border-4 border-slate-200 border-t-slate-800 rounded-full animate-spin"></div>
+        </div>
+    </main>
+
+    <!-- Link ke Script JS -->
+    <script src="Script.js"></script>
+</body>
+</html>
