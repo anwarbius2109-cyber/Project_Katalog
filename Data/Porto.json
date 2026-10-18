@@ -1,0 +1,18 @@
+[
+  {
+    "id": "P01",
+    "judul": "Pernikahan Romeo & Juliet",
+    "deskripsi": "Klien kami menggunakan custom desain bertema Rustic Gold.",
+    "gambar": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=800",
+    "link": "#",
+    "fitur": ["Custom Layout", "Galery Foto", "Wedding Gift", "Turut Mengundang", "Timer Mundur"]
+  },
+  {
+    "id": "P02",
+    "judul": "Pernikahan Rama & Shinta",
+    "deskripsi": "Undangan digital dengan nuansa tradisional modern.",
+    "gambar": "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&q=80&w=800",
+    "link": "#",
+    "fitur": ["Proses Cepat", "Unlimitid Sebar", "Request Musik", "Galery Foto", "Timer Mundur"]
+  }
+]
